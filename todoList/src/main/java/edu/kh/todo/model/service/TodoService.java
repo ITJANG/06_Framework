@@ -47,7 +47,7 @@ public interface TodoService {
 	 * @param todo
 	 * @return result
 	 */
-	int todoDelete(Todo todo);
+	int todoDelete(int todo);
 
 	/** 전체 할 일 개수 조회
 	 * @return totalCount

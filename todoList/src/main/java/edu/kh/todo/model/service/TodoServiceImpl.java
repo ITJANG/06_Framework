@@ -84,9 +84,9 @@ public class TodoServiceImpl implements TodoService{
 	}
 
 	@Override
-	public int todoDelete(Todo todo) {
+	public int todoDelete(int todoNo) {
 		
-		return mapper.todoDelete(todo);
+		return mapper.todoDelete(todoNo);
 	}
 
 	@Override
