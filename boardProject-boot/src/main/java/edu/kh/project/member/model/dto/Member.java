@@ -1,4 +1,4 @@
-package edu.kh.project.main.member.model.dto;
+package edu.kh.project.member.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

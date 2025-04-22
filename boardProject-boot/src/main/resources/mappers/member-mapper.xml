@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="edu.kh.project.main.member.model.mapper.MemberMapper">
+<mapper namespace="edu.kh.project.member.model.mapper.MemberMapper">
+
 
    <!-- 로그인(조회) -->
    <select id="login" resultType="Member">
@@ -11,6 +12,15 @@
 	WHERE MEMBER_EMAIL = #{memberEmail}
 	AND MEMBER_DEL_FL = 'N'
    </select>
+   
+   <!-- 이메일 중복 검사 -->
+   <select id="checkEmail" resultType="_int">
+    SELECT COUNT(*) 
+    FROM "MEMBER"
+    WHERE MEMBER_EMAIL = #{memberEmail}
+   	AND MEMBER_DEL_FL = 'N'
+   </select>
+   
 </mapper>
 
 

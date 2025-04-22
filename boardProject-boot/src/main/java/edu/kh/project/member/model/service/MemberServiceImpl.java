@@ -1,12 +1,12 @@
-package edu.kh.project.main.member.model.service;
+package edu.kh.project.member.model.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import edu.kh.project.main.member.model.dto.Member;
-import edu.kh.project.main.member.model.mapper.MemberMapper;
+import edu.kh.project.member.model.dto.Member;
+import edu.kh.project.member.model.mapper.MemberMapper;
 import lombok.extern.slf4j.Slf4j;
 
 @Transactional(rollbackFor = Exception.class)
@@ -26,9 +26,8 @@ public class MemberServiceImpl implements MemberService{
 	// 로그인 서비스
 	@Override
 	public Member login(Member inputMember) {
-
-		// 암호화 진행
 		
+		// 암호화 진행
 		// bcrypt.encode(문자열) : 문자열을 암호화하여 반환
 		// String bcryptPassword = bcrypt.encode(inputMember.getMemberPw());
 		// log.debug("bcryptPassword : " + bcryptPassword);
@@ -44,14 +43,20 @@ public class MemberServiceImpl implements MemberService{
 		// 3. 입력받은 비밀번호(평문 : inputMember.getMemberPw()) 와
 		// 	  암호화된 비밀번호(loginMember.getMemberPw())
 		// 	  두 비밀번호가 일치하는지 확인 (bcrypt.matches(평문, 암호화))
-		if( !bcrypt.matches(inputMember.getMemberPw(), loginMember.getMemberPw())) {
-			return null;
-		}
+//		if( !bcrypt.matches(inputMember.getMemberPw(), loginMember.getMemberPw())) {
+//			return null;
+//		}
 		
 		// 로그인 결과에서 비밀번호 제거
 		loginMember.setMemberPw(null);
 		
 		return loginMember;
+	}
+
+	// 이메일 중복 검사 서비스
+	@Override
+	public int checkEmail(String memberEmail) {
+		return mapper.checkEmail(memberEmail);
 	}
 	
 }
