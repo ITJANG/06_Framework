@@ -71,7 +71,7 @@ VALUES (
 	WHERE MEMBER_EMAIL = 'test@kh.com'
 	AND MEMBER_DEL_FL = 'N';
 --
-
+DELETE FROM MEMBER WHERE MEMBER_EMAIL = 'whalswkd1213@gmail.com';
 -- 25.04.21 여기까지 수행
 
 SELECT * FROM "MEMBER";

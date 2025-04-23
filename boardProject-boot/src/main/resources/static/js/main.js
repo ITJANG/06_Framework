@@ -54,3 +54,21 @@ if(loginEmail != null){ // 로그인폼의 이메일 input 태그가 화면상�
     document.querySelector("input[name='saveId']").checked = true;
   }
 }
+
+document.querySelector("#loginForm").addEventListener("submit", (e) => {
+  const memberEmail = document.querySelector("#memberEmail");
+  const memberPw = document.querySelector("#memberPw");
+
+  if(memberEmail.value.trim().length == 0 ){
+    alert("이메일을 입력해주세요")
+    e.preventDefault();
+    return;
+  }
+
+  if(memberPw.value.trim().length == 0 ){
+    alert("비밀번호를 입력해주세요")
+    e.preventDefault();
+    return;
+  }
+
+})
