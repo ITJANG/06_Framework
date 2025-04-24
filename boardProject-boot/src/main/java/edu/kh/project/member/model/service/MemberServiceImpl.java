@@ -43,9 +43,9 @@ public class MemberServiceImpl implements MemberService{
 		// 3. 입력받은 비밀번호(평문 : inputMember.getMemberPw()) 와
 		// 	  암호화된 비밀번호(loginMember.getMemberPw())
 		// 	  두 비밀번호가 일치하는지 확인 (bcrypt.matches(평문, 암호화))
-//		if( !bcrypt.matches(inputMember.getMemberPw(), loginMember.getMemberPw())) {
-//			return null;
-//		}
+		if( !bcrypt.matches(inputMember.getMemberPw(), loginMember.getMemberPw())) {
+			return null;
+		}
 		
 		// 로그인 결과에서 비밀번호 제거
 		loginMember.setMemberPw(null);
