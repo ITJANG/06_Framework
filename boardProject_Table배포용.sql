@@ -603,7 +603,6 @@ SELECT * FROM "BOARD_IMG"
 WHERE BOARD_NO = 1998
 ORDER BY IMG_ORDER;
 
-
 -- 상세 조회하고있는 게시글의 댓글 목록 조회 SQL
 -- LEVEL : Oracle에서 제공하는 계층형 데이터 조회할 때 "레벨"에 있는지 알려주는 
 -- 가상의 컬럼

@@ -8,7 +8,7 @@
 // loginMemberNo -> 현재 로그인한 사람의 memberNo
 // 2) 현재 게시글 번호 준비
 // boardNo -> 현재 게시글의 번호
-// 3) 조항요 여부준비
+// 3) 좋아요 여부준비
 // likeCheck -> 현재 이 게시그의 likeCheck
 
 // 1. #boardLike 가 클릭 되었을 때
