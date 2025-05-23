@@ -53,7 +53,7 @@ public class FileConfig implements WebMvcConfigurer{
 	private String boardResourceHandler;
 	
 	@Value("${my.board.resource-location}")
-	private String boardResourceLoaction;
+	private String boardResourceLocation;
 	
 	
 	// 요청 주소에 따라
@@ -82,7 +82,7 @@ public class FileConfig implements WebMvcConfigurer{
 		
 		registry
 		.addResourceHandler(boardResourceHandler)		// /images/board/**
-		.addResourceLocations(boardResourceLoaction);	// file:///C:/uploadFiles/board/
+		.addResourceLocations(boardResourceLocation);	// file:///C:/uploadFiles/board/
 		
 	}
 	
