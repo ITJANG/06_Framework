@@ -27,4 +27,8 @@ public class Member {
 	private String enrollDate;		// 회원 회원 가입일
 	private String memberDelFl;		// 회원 탈퇴 여부(Y/N)
 	private String authority;		// 권한(1. 일반사용자, 2. 관리자)
+	
+	// 관리자 페이지에서 필요
+	// 회원 수
+	private int memberCount;
 }
